@@ -5,8 +5,8 @@
 namespace Event {
 struct Ball_HitPlayer {};
 struct Ball_HitBlock {
-  size_t row;
-  size_t col;
+    size_t row;
+    size_t col;
 };
 struct Ball_HitWall {};
 struct Ball_Missed {};
@@ -14,7 +14,7 @@ struct Ball_Missed {};
 struct Game_Reset {};
 struct Game_Paused {};
 struct Game_Resumed {};
-} // namespace Event
+}  // namespace Event
 
 using GameEventBus =
     EventBus<Event::Ball_HitPlayer, Event::Ball_HitBlock, Event::Ball_HitWall,

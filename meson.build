@@ -8,7 +8,7 @@ project('Breakout', 'c', 'cpp',
 
 raylib = dependency('raylib')
 
-local_inc = include_directories('include')
+eventbus_inc = include_directories('include/eventbus')
 raygui_inc = include_directories('include/raygui/src')
 
 src_files = files(
@@ -21,6 +21,6 @@ src_files = files(
 
 executable('breakout',
   src_files,
-  include_directories : [local_inc, raygui_inc],
+  include_directories : [eventbus_inc, raygui_inc],
   dependencies : raylib
 )

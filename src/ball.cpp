@@ -2,8 +2,6 @@
 
 #include <algorithm>
 
-#include "events.h"
-
 Ball::Ball(GameEventBus* bus) : bus(bus) { Reset(); }
 
 void Ball::Update(float deltaTime, Layout& levelLayout, Player& player) {
