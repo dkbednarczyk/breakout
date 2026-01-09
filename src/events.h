@@ -5,8 +5,8 @@
 namespace Event {
 struct Ball_HitPlayer {};
 struct Ball_HitBlock {
-  int row;
-  int col;
+  size_t row;
+  size_t col;
 };
 struct Ball_HitWall {};
 struct Ball_Missed {};

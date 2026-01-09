@@ -15,8 +15,8 @@ void Ball::Update(float deltaTime, Layout& levelLayout, Player& player) {
         return;
     }
 
-    for (int r = 0; r < levelLayout.size(); r++) {
-        for (int c = 0; c < levelLayout[r].size(); c++) {
+    for (size_t r = 0; r < levelLayout.size(); r++) {
+        for (size_t c = 0; c < levelLayout[r].size(); c++) {
             Block& block = levelLayout[r][c];
 
             if (block.active &&

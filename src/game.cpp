@@ -8,7 +8,7 @@
 #include "constants.h"
 
 /* Constructor and destructor */
-Game::Game() : bus(), player(&bus), ball(&bus), level(5, 7) {
+Game::Game() : bus(), level(5, 7), player(&bus), ball(&bus) {
     // Load sounds
     LoadSounds();
 
@@ -93,7 +93,6 @@ void Game::HandlePauseMenu() {
                                     .width = SCREEN_WIDTH / 2.0f,
                                     .height = SCREEN_HEIGHT / 3.0f};
     const int padding = 10;
-    const int fontSize = 20;
 
     if (GuiWindowBox(menuRect, "Paused")) {
         TogglePause();
@@ -208,8 +207,6 @@ void Game::Draw() {
     }
 
     std::string livesText = std::format("Lives: {}", lives);
-    int textWidth = MeasureText(livesText.c_str(), 20);
-
     DrawText(livesText.c_str(), 5, (SCREEN_HEIGHT - 25), 20, GREEN);
 }
 
